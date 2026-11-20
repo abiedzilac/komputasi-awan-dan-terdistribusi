@@ -23,8 +23,9 @@ Hybrid Cloud menggabungkan Private Cloud dan Public Cloud sehingga keduanya dapa
 Sementara itu, Public Cloud dapat dimanfaatkan untuk mendukung layanan yang membutuhkan kapasitas lebih fleksibel, misalnya portal pengecekan status atau komponen layanan lain yang tidak menyimpan data sensitif. Pembagian ini memungkinkan sistem menangani peningkatan jumlah pengguna tanpa harus menempatkan seluruh data kependudukan pada infrastruktur public cloud.
 
 Pemilihan Hybrid Cloud juga dapat dikaitkan dengan lima karakteristik esensial cloud computing menurut NIST SP 800-145 sebagai berikut, 
-|---|---|
+
 | Karakteristik NIST | Penerapan pada Sistem Data Kependudukan |
+|---|---|
 | On-demand self-service |	Instansi yang memiliki kewenangan dapat menggunakan sumber daya komputasi sesuai kebutuhan tanpa harus selalu melalui proses permintaan manual kepada pengelola infrastruktur. |
 | Broad network access |	Sistem dapat diakses oleh berbagai instansi, seperti Dukcapil daerah, kepolisian, dan bank melalui jaringan dengan mekanisme keamanan yang sesuai. |
 | Resource pooling |	Sumber daya komputasi dapat dimanfaatkan bersama oleh berbagai instansi, tetapi hak akses setiap instansi tetap dibatasi sesuai kewenangannya. |
