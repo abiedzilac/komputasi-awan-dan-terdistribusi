@@ -59,7 +59,11 @@ Koneksi antara Private Cloud dan Public Cloud berpotensi menjadi celah keamanan 
 Gangguan jaringan dapat menyebabkan komunikasi antara Private Cloud dan Public Cloud terhambat sehingga beberapa layanan tidak dapat diakses sementara. Untuk mengatasinya, perlu disediakan koneksi cadangan, pemantauan jaringan, dan mekanisme pemulihan layanan (failover).
 
 #### 4. Bandingkan singkat dengan **satu alternatif yang kalian tolak** — kenapa alternatif itu kurang tepat (mis. kenapa Public Cloud murni ditolak, atau kenapa Private Cloud murni dianggap kurang skalabel).
+Alternatif yang dipertimbangkan tetapi tidak dipilih adalah Public Cloud murni. Model ini sebenarnya memiliki keunggulan dalam hal fleksibilitas dan skalabilitas karena kapasitas sumber dayanya dapat disesuaikan dengan kebutuhan pengguna.
 
+Namun, Public Cloud murni kurang sesuai untuk Sistem Data Kependudukan karena sistem ini menyimpan informasi yang sangat sensitif, seperti NIK, alamat, dan data biometrik warga negara. Jika seluruh data ditempatkan pada infrastruktur Public Cloud, pemerintah memiliki keterbatasan dalam mengendalikan infrastruktur secara langsung. Hal ini dapat meningkatkan risiko keamanan dan kebocoran data.
+
+Oleh karena itu, Hybrid Cloud lebih dipilih karena data utama tetap disimpan dalam Private Cloud yang berada di bawah kendali negara, sedangkan Public Cloud digunakan untuk mendukung layanan yang membutuhkan fleksibilitas dan skalabilitas. Dengan demikian, kebutuhan keamanan dan kemampuan sistem dalam menangani lonjakan akses dapat tetap terpenuhi.
 ## Struktur Submission
 
 ```
