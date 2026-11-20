@@ -13,7 +13,8 @@ Pemerintah ingin membangun **Sistem Data Kependudukan** (nama, NIK, alamat, data
 
 ## Tugas Kelompok
 
-1. **Rekomendasikan Deployment Model** (Public / Private / Hybrid / Community Cloud) yang paling tepat untuk sistem ini. Jelaskan alasannya berdasarkan **karakteristik NIST** (on-demand self-service, broad network access, resource pooling, rapid elasticity, measured service) dikaitkan dengan kebutuhan kerahasiaan vs skalabilitas.
+#### 1. **Rekomendasikan Deployment Model** (Public / Private / Hybrid / Community Cloud) yang paling tepat untuk sistem ini. Jelaskan alasannya berdasarkan **karakteristik NIST** (on-demand self-service, broad network access, resource pooling, rapid elasticity, measured service) dikaitkan dengan kebutuhan kerahasiaan vs skalabilitas.
+
 Menurut kami, pilihan yang tepat  adalah Hybrid Cloud karena sistem harus menjaga kerahasiaan data kependudukan, tetapi tetap mampu menangani lonjakan akses dari ribuan instansi.
   **Rekomenadi Deployment Model : Hybrid Cloud**
 Berdasarkan kebutuhan pada studi kasus, Hybrid Cloud merupakan model deployment yang paling sesuai untuk Sistem Data Kependudukan. Alasannya, sistem ini harus mampu menjaga kerahasiaan data pribadi warga negara, tetapi juga perlu menangani akses dari ribuan instansi yang jumlahnya bisa meningkat pada waktu tertentu.
@@ -32,7 +33,7 @@ Pemilihan Hybrid Cloud juga dapat dikaitkan dengan lima karakteristik esensial c
 | Rapid elasticity |	Kapasitas layanan dapat ditambah atau dikurangi sesuai kebutuhan. Hal ini berguna ketika terjadi peningkatan akses, misalnya saat musim pemilu atau pendaftaran sekolah. |
 | Measured service |	Penggunaan sumber daya seperti penyimpanan, jaringan, dan komputasi dapat dipantau dan diukur sehingga pemerintah dapat mengetahui kebutuhan kapasitas serta mengelola penggunaannya dengan lebih efisien. |
 
-2. **Rekomendasikan Service Model** (IaaS / PaaS / SaaS) yang tepat untuk komponen-komponen berbeda dari sistem ini (boleh berbeda service model untuk komponen berbeda, mis. database inti vs portal publik untuk pengecekan status).
+#### 2. **Rekomendasikan Service Model** (IaaS / PaaS / SaaS) yang tepat untuk komponen-komponen berbeda dari sistem ini (boleh berbeda service model untuk komponen berbeda, mis. database inti vs portal publik untuk pengecekan status).
 
 Setiap komponen dalam Sistem Data Kependudukan memiliki kebutuhan yang berbeda, sehingga Service Model yang digunakan juga perlu disesuaikan. Bagian yang mengelola data sensitif membutuhkan kontrol dan keamanan yang lebih ketat, sedangkan bagian aplikasi yang diakses banyak pengguna perlu lebih mudah dikelola dan mampu menyesuaikan kapasitas saat terjadi peningkatan akses.
 
@@ -46,11 +47,18 @@ Kombinasi IaaS, PaaS, dan SaaS :
 | Portal pengecekan status | PaaS | 	Memudahkan pengembangan serta penyesuaian kapasitas ketika jumlah pengguna meningkat. |
 | Email dan aplikasi kolaborasi internal | SaaS | 	Dapat langsung digunakan tanpa perlu membangun dan mengelola aplikasi sendiri. |
 
-3. Jelaskan **minimal 2 risiko spesifik** dari pilihan kalian dan mitigasinya (mis. jika Hybrid Cloud dipilih: risiko sinkronisasi data antara private & public segment).
+#### 3. Jelaskan **minimal 2 risiko spesifik** dari pilihan kalian dan mitigasinya (mis. jika Hybrid Cloud dipilih: risiko sinkronisasi data antara private & public segment).
 
+1. Sinkronisasi Data
+Perbedaan waktu pembaruan antara Private Cloud dan Public Cloud dapat menyebabkan data yang ditampilkan tidak sesuai dengan kondisi terbaru. Untuk mengatasinya, diperlukan API yang terstandarisasi, validasi data, serta pemantauan proses sinkronisasi secara berkala.
 
+2. Kebocoran Data melalui API
+Koneksi antara Private Cloud dan Public Cloud berpotensi menjadi celah keamanan apabila tidak dilindungi dengan baik. Pihak yang tidak memiliki izin dapat mencoba mengakses data kependudukan melalui API. Mitigasinya adalah menerapkan autentikasi, pembatasan hak akses, enkripsi komunikasi, dan pencatatan aktivitas akses (audit log).
 
-4. Bandingkan singkat dengan **satu alternatif yang kalian tolak** — kenapa alternatif itu kurang tepat (mis. kenapa Public Cloud murni ditolak, atau kenapa Private Cloud murni dianggap kurang skalabel).
+3. Gangguan Koneksi Antar-Cloud
+Gangguan jaringan dapat menyebabkan komunikasi antara Private Cloud dan Public Cloud terhambat sehingga beberapa layanan tidak dapat diakses sementara. Untuk mengatasinya, perlu disediakan koneksi cadangan, pemantauan jaringan, dan mekanisme pemulihan layanan (failover).
+
+#### 4. Bandingkan singkat dengan **satu alternatif yang kalian tolak** — kenapa alternatif itu kurang tepat (mis. kenapa Public Cloud murni ditolak, atau kenapa Private Cloud murni dianggap kurang skalabel).
 
 ## Struktur Submission
 
