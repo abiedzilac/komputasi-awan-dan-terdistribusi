@@ -34,7 +34,23 @@ Pemilihan Hybrid Cloud juga dapat dikaitkan dengan lima karakteristik esensial c
 | Measured service |	Penggunaan sumber daya seperti penyimpanan, jaringan, dan komputasi dapat dipantau dan diukur sehingga pemerintah dapat mengetahui kebutuhan kapasitas serta mengelola penggunaannya dengan lebih efisien. |
 
 2. **Rekomendasikan Service Model** (IaaS / PaaS / SaaS) yang tepat untuk komponen-komponen berbeda dari sistem ini (boleh berbeda service model untuk komponen berbeda, mis. database inti vs portal publik untuk pengecekan status).
+
+Setiap komponen dalam Sistem Data Kependudukan memiliki kebutuhan yang berbeda, sehingga Service Model yang digunakan juga perlu disesuaikan. Bagian yang mengelola data sensitif membutuhkan kontrol dan keamanan yang lebih ketat, sedangkan bagian aplikasi yang diakses banyak pengguna perlu lebih mudah dikelola dan mampu menyesuaikan kapasitas saat terjadi peningkatan akses.
+
+Kombinasi IaaS, PaaS, dan SaaS :
+
+| Komponen Sistem | Service Model | Alasan |
+|---|---|---|
+| Database utama kependudukan | laaS | Memberikan kontrol lebih besar terhadap server, penyimpanan, jaringan, dan keamanan data sensitif. |
+| Penyimpanan data biometrik | laaS | Membutuhkan pengelolaan infrastruktur dan perlindungan data yang ketat. |
+| Aplikasi pengelolaan data dan API | PaaS | Memudahkan pengembangan dan pengelolaan aplikasi tanpa harus mengatur seluruh infrastruktur server. |
+| Portal pengecekan status | PaaS | 	Memudahkan pengembangan serta penyesuaian kapasitas ketika jumlah pengguna meningkat. |
+| Email dan aplikasi kolaborasi internal | SaaS | 	Dapat langsung digunakan tanpa perlu membangun dan mengelola aplikasi sendiri. |
+
 3. Jelaskan **minimal 2 risiko spesifik** dari pilihan kalian dan mitigasinya (mis. jika Hybrid Cloud dipilih: risiko sinkronisasi data antara private & public segment).
+
+
+
 4. Bandingkan singkat dengan **satu alternatif yang kalian tolak** — kenapa alternatif itu kurang tepat (mis. kenapa Public Cloud murni ditolak, atau kenapa Private Cloud murni dianggap kurang skalabel).
 
 ## Struktur Submission
