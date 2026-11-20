@@ -14,7 +14,6 @@ Pemerintah ingin membangun **Sistem Data Kependudukan** (nama, NIK, alamat, data
 ## Tugas Kelompok
 
 1. **Rekomendasikan Deployment Model** (Public / Private / Hybrid / Community Cloud) yang paling tepat untuk sistem ini. Jelaskan alasannya berdasarkan **karakteristik NIST** (on-demand self-service, broad network access, resource pooling, rapid elasticity, measured service) dikaitkan dengan kebutuhan kerahasiaan vs skalabilitas.
-
 Menurut kami, pilihan yang tepat  adalah Hybrid Cloud karena sistem harus menjaga kerahasiaan data kependudukan, tetapi tetap mampu menangani lonjakan akses dari ribuan instansi.
   **Rekomenadi Deployment Model : Hybrid Cloud**
 Berdasarkan kebutuhan pada studi kasus, Hybrid Cloud merupakan model deployment yang paling sesuai untuk Sistem Data Kependudukan. Alasannya, sistem ini harus mampu menjaga kerahasiaan data pribadi warga negara, tetapi juga perlu menangani akses dari ribuan instansi yang jumlahnya bisa meningkat pada waktu tertentu.
