@@ -7,11 +7,11 @@
 - **Hybrid Cloud** akhirnya dipilih sebagai solusi paling ideal. Dengan model ini, komponen inti dan database sensitif tetap disimpan di dalam **Private Cloud** yang dikelola penuh oleh pemerintah, sementara layanan pendukung yang bersifat publik dan rentan mengalami lonjakan beban (seperti portal pengecekan status dan antarmuka API akses instansi) ditempatkan di **Public Cloud** untuk mendapatkan elastisitas kapasitas tanpa mengorbankan kerahasiaan data inti.
 
 ## Diskusi service model per komponen
-- **Database utama kependudukan & Penyimpanan data biometrik → IaaS (Infrastructure as a Service):**
+- **Database utama kependudukan & Penyimpanan data biometrik >> IaaS (Infrastructure as a Service):**
   Dipilih IaaS karena kedua komponen ini menyimpan aset paling krusial dan sensitif. Dengan IaaS, tim infrastruktur pemerintah memiliki kendali penuh atas sistem operasi, konfigurasi jaringan (isolasi *subnet*/VPN), enkripsi penyimpanan tingkat rendah, serta kebijakan keamanan berlapis sesuai regulasi negara.
-- **Aplikasi pengelolaan data, API, & Portal pengecekan status → PaaS (Platform as a Service):**
+- **Aplikasi pengelolaan data, API, & Portal pengecekan status >> PaaS (Platform as a Service):**
   Dipilih PaaS agar tim pengembang aplikasi pemerintah bisa fokus pada logika bisnis, integrasi layanan antar-instansi (Dukcapil, Kepolisian, Bank/KYC), dan fitur aplikasi tanpa terbebani urusan pemeliharaan server fisik maupun *patching* OS. Selain itu, PaaS mempermudah *auto-scaling* ketika akses portal pengecekan status melonjak drastis.
-- **Email dan aplikasi kolaborasi internal → SaaS (Software as a Service):**
+- **Email dan aplikasi kolaborasi internal >> SaaS (Software as a Service):**
   Dipilih SaaS karena komponen ini hanya berfungsi sebagai alat komunikasi dan koordinasi operasional pegawai/admin antar-instansi, bukan tempat penyimpanan *master data* kependudukan. Menggunakan SaaS lebih efisien secara waktu dan biaya operasional karena siap pakai (*ready-to-use*).
 
 ## Log Penggunaan AI (Level 2)
